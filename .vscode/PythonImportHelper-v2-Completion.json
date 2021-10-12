@@ -1,0 +1,340 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "UserAgent",
+        "importPath": "fake_useragent",
+        "description": "fake_useragent",
+        "isExtraImport": true,
+        "detail": "fake_useragent",
+        "documentation": {}
+    },
+    {
+        "label": "UserAgent",
+        "importPath": "fake_useragent",
+        "description": "fake_useragent",
+        "isExtraImport": true,
+        "detail": "fake_useragent",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "Article",
+        "importPath": "newspaper",
+        "description": "newspaper",
+        "isExtraImport": true,
+        "detail": "newspaper",
+        "documentation": {}
+    },
+    {
+        "label": "Article",
+        "importPath": "newspaper",
+        "description": "newspaper",
+        "isExtraImport": true,
+        "detail": "newspaper",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "mongoengine",
+        "description": "mongoengine",
+        "isExtraImport": true,
+        "detail": "mongoengine",
+        "documentation": {}
+    },
+    {
+        "label": "detect",
+        "importPath": "langdetect",
+        "description": "langdetect",
+        "isExtraImport": true,
+        "detail": "langdetect",
+        "documentation": {}
+    },
+    {
+        "label": "redis",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "redis",
+        "description": "redis",
+        "detail": "redis",
+        "documentation": {}
+    },
+    {
+        "label": "Queue",
+        "importPath": "rq",
+        "description": "rq",
+        "isExtraImport": true,
+        "detail": "rq",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleMethods",
+        "importPath": "methods",
+        "description": "methods",
+        "isExtraImport": true,
+        "detail": "methods",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "WaybackArticle",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class WaybackArticle(Document):\n    title = StringField(required=True)\n    wordcount = IntField(required=True)\n    text = StringField()\n    original_url = URLField(required=True)\n    author = StringField()\n    html = StringField(required=False)\n    keywords = ListField(required=False)\n    language = StringField(required=False)\n    topimage = URLField(required=False)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "WaybackURL",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class WaybackURL:\n    url: str\n    timecode: str\n@dataclass\nclass Domain:\n    domain: str\n    wayback_urls: List[WaybackURL]\n    articles: List[Article]\n    scraped: bool = False\ndef get_waback_urls(domain: str, limit: int):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Domain",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Domain:\n    domain: str\n    wayback_urls: List[WaybackURL]\n    articles: List[Article]\n    scraped: bool = False\ndef get_waback_urls(domain: str, limit: int):\n    url = f\"https://web.archive.org/cdx/search/cdx?url={domain}&matchType=domain&limit={limit}&output=json&filter=statuscode:200&filter=mimetype:text/html&&collapse=urlkey\"\n    r = requests.get(url, headers=header)\n    urls_temp = []\n    if r.status_code == 200:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_waback_urls",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_waback_urls(domain: str, limit: int):\n    url = f\"https://web.archive.org/cdx/search/cdx?url={domain}&matchType=domain&limit={limit}&output=json&filter=statuscode:200&filter=mimetype:text/html&&collapse=urlkey\"\n    r = requests.get(url, headers=header)\n    urls_temp = []\n    if r.status_code == 200:\n        for url in r.json():\n            res = [ele for ele in URL_FILTERS if (ele in url[2])]\n            if not bool(res):\n                wurl = WaybackURL(url=url[2], timecode=url[1])\n                urls_temp.append(wurl)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "detect_language",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def detect_language(text:str):\n    return detect(text)\n################################################################\n# Queue items for processing\ndef enqueue_get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n    job = q.enqueue(ArticleMethods.get_article, url, min_length,max_length,language,check_spun)\n    print(len(q))\n@app.route(\"/test\")\ndef test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "enqueue_get_article",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def enqueue_get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n    job = q.enqueue(ArticleMethods.get_article, url, min_length,max_length,language,check_spun)\n    print(len(q))\n@app.route(\"/test\")\ndef test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')\n    if test:\n        print(test.wordcount)\n    return test.text\nif __name__ == '__main__':",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "test_task",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')\n    if test:\n        print(test.wordcount)\n    return test.text\nif __name__ == '__main__':\n    app.run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "q",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "q = Queue(connection=r)\nfrom methods import ArticleMethods\nfrom flask import Flask\napp = Flask(__name__)\n# API_URL = \"https://api-inference.huggingface.co/models/imzachjohnson/autonlp-spinner-check-16492731\"\n# headers = {\"Authorization\": \"Bearer api_ovQXHEKfhZEfUBJKXXDKLUcznopcXPHYdg\"}\n# def query(payload):\n# \tresponse = requests.post(API_URL, headers=headers, json=payload)\n# \treturn response.json()\n# output = query({\"inputs\": \"Nonetheless, it's probably better to be safe than sorry, by getting the most effective germ-killing soap possible.\"})",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = Flask(__name__)\n# API_URL = \"https://api-inference.huggingface.co/models/imzachjohnson/autonlp-spinner-check-16492731\"\n# headers = {\"Authorization\": \"Bearer api_ovQXHEKfhZEfUBJKXXDKLUcznopcXPHYdg\"}\n# def query(payload):\n# \tresponse = requests.post(API_URL, headers=headers, json=payload)\n# \treturn response.json()\n# output = query({\"inputs\": \"Nonetheless, it's probably better to be safe than sorry, by getting the most effective germ-killing soap possible.\"})\n# print(output)\nconnect(\n    host=\"mongodb+srv://zjohnson:coopalex0912@cluster0.2amvb.mongodb.net/eah?retryWrites=true&w=majority\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "URL_FILTERS",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "URL_FILTERS = [\n    \"/category/\",\n    \"/author/\",\n    \".min.js\",\n    \".jpg\",\n    \".png\",\n    \"/wp-content/uploads/\",\n    \"/tag/\",\n    \"/wp-content/plugins/\",\n    \"?wc-ajax=%%Endpoint%%\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ua",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "ua = UserAgent()\nheader = {\"User-Agent\": str(ua.chrome)}\nclass WaybackArticle(Document):\n    title = StringField(required=True)\n    wordcount = IntField(required=True)\n    text = StringField()\n    original_url = URLField(required=True)\n    author = StringField()\n    html = StringField(required=False)\n    keywords = ListField(required=False)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "header",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "header = {\"User-Agent\": str(ua.chrome)}\nclass WaybackArticle(Document):\n    title = StringField(required=True)\n    wordcount = IntField(required=True)\n    text = StringField()\n    original_url = URLField(required=True)\n    author = StringField()\n    html = StringField(required=False)\n    keywords = ListField(required=False)\n    language = StringField(required=False)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ArticleMethods",
+        "kind": 6,
+        "importPath": "methods",
+        "description": "methods",
+        "peekOfCode": "class ArticleMethods:\n    def get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n        try:\n            article = Article(url)\n            article.download()-\n            article.parse()\n            res = len(article.text.split())\n            print(res)\n            if res > min_length:\n                detected_language = detect_language(article.text[:25])",
+        "detail": "methods",
+        "documentation": {}
+    }
+]
