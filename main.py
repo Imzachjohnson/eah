@@ -97,15 +97,16 @@ def detect_language(text:str):
 
 def enqueue_get_article(url, min_length=300, max_length=None, language="en", check_spun=False):
     job = q.enqueue(ArticleMethods.get_article, url, min_length,max_length,language,check_spun)
-    print(len(q))
+    return job
 
+################################################################
+# Views
 
 @app.route("/test")
 def test_task():
     test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')
-    if test:
-        print(test.wordcount)
-    return test.text
+   
+    return test.id
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

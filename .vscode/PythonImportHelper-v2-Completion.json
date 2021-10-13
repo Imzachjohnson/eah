@@ -261,7 +261,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def detect_language(text:str):\n    return detect(text)\n################################################################\n# Queue items for processing\ndef enqueue_get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n    job = q.enqueue(ArticleMethods.get_article, url, min_length,max_length,language,check_spun)\n    print(len(q))\n@app.route(\"/test\")\ndef test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')",
+        "peekOfCode": "def detect_language(text:str):\n    return detect(text)\n################################################################\n# Queue items for processing\ndef enqueue_get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n    job = q.enqueue(ArticleMethods.get_article, url, min_length,max_length,language,check_spun)\n    return job\n################################################################\n# Views\n@app.route(\"/test\")",
         "detail": "main",
         "documentation": {}
     },
@@ -270,7 +270,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def enqueue_get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n    job = q.enqueue(ArticleMethods.get_article, url, min_length,max_length,language,check_spun)\n    print(len(q))\n@app.route(\"/test\")\ndef test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')\n    if test:\n        print(test.wordcount)\n    return test.text\nif __name__ == '__main__':",
+        "peekOfCode": "def enqueue_get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n    job = q.enqueue(ArticleMethods.get_article, url, min_length,max_length,language,check_spun)\n    return job\n################################################################\n# Views\n@app.route(\"/test\")\ndef test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')\n    return test.id\nif __name__ == '__main__':",
         "detail": "main",
         "documentation": {}
     },
@@ -279,7 +279,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')\n    if test:\n        print(test.wordcount)\n    return test.text\nif __name__ == '__main__':\n    app.run()",
+        "peekOfCode": "def test_task():\n    test = enqueue_get_article('https://web.archive.org/web/20170924011835/http://www.footcarefacts.com/consider-set-half-marathon-pace/')\n    return test.id\nif __name__ == '__main__':\n    app.run(debug=True)",
         "detail": "main",
         "documentation": {}
     },
@@ -333,7 +333,7 @@
         "kind": 6,
         "importPath": "methods",
         "description": "methods",
-        "peekOfCode": "class ArticleMethods:\n    def get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n        try:\n            article = Article(url)\n            article.download()-\n            article.parse()\n            res = len(article.text.split())\n            print(res)\n            if res > min_length:\n                detected_language = detect_language(article.text[:25])",
+        "peekOfCode": "class ArticleMethods:\n    def get_article(url, min_length=300, max_length=None, language=\"en\", check_spun=False):\n        try:\n            article = Article(url)\n            article.download()\n            article.parse()\n            res = len(article.text.split())\n            print(res)\n            if res > min_length:\n                detected_language = detect_language(article.text[:25])",
         "detail": "methods",
         "documentation": {}
     }

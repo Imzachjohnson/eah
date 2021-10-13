@@ -8,7 +8,7 @@ class ArticleMethods:
     def get_article(url, min_length=300, max_length=None, language="en", check_spun=False):
         try:
             article = Article(url)
-            article.download()-
+            article.download()
             article.parse()
 
             res = len(article.text.split())
@@ -27,6 +27,7 @@ class ArticleMethods:
                         videos=article.movies,
                         wordcount=res,
                     )
+                    final_article.save()
                     return final_article
             else:
                 return False
